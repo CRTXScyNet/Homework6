@@ -28,7 +28,7 @@ public class Main {
 
         // Task five
         for (int year = 1904; year < 2096; year = year + 4) {
-            System.out.println(year);
+            System.out.println(year + " год является високосным");
         }
 
         // Task six
@@ -52,8 +52,8 @@ public class Main {
         // Task nine
         bottle = 0;
         for (int i = 0; i < 12; i++) {
-            bottle = bottle + bottle / 100;
             bottle = bottle + salary;
+            bottle = bottle + bottle / 100;
             System.out.println("Месяц " + i + ", сумма накоплений равна " + bottle + " рублей");
         }
 
