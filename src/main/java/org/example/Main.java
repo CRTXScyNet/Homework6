@@ -52,14 +52,14 @@ public class Main {
         // Task nine
         bottle = 0;
         for (int i = 0; i < 12; i++) {
-            bottle = bottle + bottle/100;
+            bottle = bottle + bottle / 100;
             bottle = bottle + salary;
             System.out.println("Месяц " + i + ", сумма накоплений равна " + bottle + " рублей");
         }
 
         //Task ten
         for (int i = 1; i <= 10; i++) {
-            System.out.println("2*" + i + "=" + (2*i));
+            System.out.println("2*" + i + "=" + (2 * i));
         }
     }
 }
