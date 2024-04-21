@@ -2,64 +2,97 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
 
         // Task one
-        for (int i = 1; i <= 10; i++) {
-            System.out.println(i);
+        int bottle = 0;
+        int salary = 15000;
+        int goal = 2_459_000;
+        int day = 0;
+        while (bottle < goal) {
+            day++;
+            bottle = bottle + salary;
+            bottle = bottle + bottle / 100;
         }
+        System.out.println("Месяц " + day + ", сумма накоплений равна " + bottle + " рублей");
 
         // Task two
-        for (int i = 10; i > 0; i--) {
-            System.out.println(i);
+        int i = 0;
+        while (i < 10) {
+            i++;
+            System.out.print(i + " ");
         }
+        System.out.println();
+        while (i > 0) {
+            System.out.print(i + " ");
+            i--;
+        }
+        System.out.println();
 
         // Task three
-        for (int i = 0; i <= 17; i++) {
-            if (i % 2 == 0) {
-                System.out.println(i);
-            }
+        int populationY = 12_000_000;
+        int births;
+        int deaths;
+        for (int j = 1; j <= 10; j++) {
+            births = populationY / 1000 * 17;
+            deaths = populationY / 1000 * 8;
+            populationY = populationY + births - deaths;
+            System.out.println("Год " + j + ", численность населения составляет " + populationY);
         }
 
         // Task four
-        for (int i = 10; i >= -10; i--) {
-            System.out.println(i);
+        double percent = 0.07f;
+        double deposite = 15000;
+        goal = 12_000_000;
+        int month = 0;
+        while (deposite < goal) {
+            month++;
+            deposite = deposite + (deposite * percent);
+            System.out.println("Месяц: " + month + ", сумма накоплений: " + (int) deposite);
         }
 
-        // Task five
-        for (int year = 1904; year < 2096; year = year + 4) {
-            System.out.println(year + " год является високосным");
+        //Task five
+        deposite = 15000;
+        month = 0;
+        while (deposite < goal) {
+            month++;
+            deposite = deposite + (deposite * percent);
+            if (month % 6 == 0) {
+                System.out.println("Месяц: " + month + ", сумма накоплений: " + (int) deposite);
+            }
         }
 
         // Task six
-        for (int i = 7; i <= 98; i = i + 7) {
-            System.out.println(i);
+        deposite = 15000;
+        month = 0;
+        int distance = 12 * 9;
+        while (month < distance) {
+            month++;
+            deposite = deposite + (deposite * percent);
+            if (month % 6 == 0) {
+                System.out.println("Месяц: " + month + ", сумма накоплений: " + (int) deposite);
+            }
         }
 
-        //Task seven
-        for (int i = 1; i <= 512; i = i * 2) {
-            System.out.println(i);
+        // Task seven
+        int friday = 7;
+        int dayOfMonth = 1;
+        while (dayOfMonth <= 30) {
+            if (dayOfMonth % 7 == friday || dayOfMonth % 7 == 0 && friday == 7) {
+                System.out.println("Сегодня пятница, " + dayOfMonth + "-е число. Необходимо подготовить отчет");
+            }
+            dayOfMonth++;
         }
-
         // Task eight
-        int bottle = 0;
-        int salary = 29000;
-        for (int i = 0; i < 12; i++) {
-            bottle = bottle + salary;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + bottle + " рублей");
-        }
-
-        // Task nine
-        bottle = 0;
-        for (int i = 0; i < 12; i++) {
-            bottle = bottle + salary;
-            bottle = bottle + bottle / 100;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + bottle + " рублей");
-        }
-
-        //Task ten
-        for (int i = 1; i <= 10; i++) {
-            System.out.println("2*" + i + "=" + (2 * i));
-        }
+        int currentYear = 2024;
+        int start = currentYear - 200;
+        int end = currentYear + 100;
+        int period = 79;
+        int yearFromZero = 0;
+        do {
+            yearFromZero += period;
+            if (yearFromZero > start) {
+                System.out.println(yearFromZero);
+            }
+        } while (yearFromZero < currentYear);
     }
 }
