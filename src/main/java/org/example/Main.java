@@ -7,13 +7,13 @@ public class Main {
         int bottle = 0;
         int salary = 15000;
         int goal = 2_459_000;
-        int day = 0;
+        int months = 0;
         while (bottle < goal) {
-            day++;
+            months++;
             bottle = bottle + salary;
             bottle = bottle + bottle / 100;
         }
-        System.out.println("Месяц " + day + ", сумма накоплений равна " + bottle + " рублей");
+        System.out.println("Месяц " + months + ", сумма накоплений равна " + bottle + " рублей");
 
         // Task two
         int i = 0;
@@ -22,7 +22,7 @@ public class Main {
             System.out.print(i + " ");
         }
         System.out.println();
-        while (i > 0) {
+        for (; i > 0; ) {
             System.out.print(i + " ");
             i--;
         }
@@ -30,12 +30,14 @@ public class Main {
 
         // Task three
         int populationY = 12_000_000;
-        int births;
-        int deaths;
+        int birthsPerOneThousandCityzens = 17;
+        int deathsPerOneThousandCityzens = 8;
+        int birthsThisYear;
+        int deathsThisYear;
         for (int j = 1; j <= 10; j++) {
-            births = populationY / 1000 * 17;
-            deaths = populationY / 1000 * 8;
-            populationY = populationY + births - deaths;
+            birthsThisYear = populationY / 1000 * birthsPerOneThousandCityzens;
+            deathsThisYear = populationY / 1000 * deathsPerOneThousandCityzens;
+            populationY = populationY + birthsThisYear - deathsThisYear;
             System.out.println("Год " + j + ", численность населения составляет " + populationY);
         }
 
@@ -53,10 +55,11 @@ public class Main {
         //Task five
         deposite = 15000;
         month = 0;
+        int halfYear = 6;
         while (deposite < goal) {
             month++;
             deposite = deposite + (deposite * percent);
-            if (month % 6 == 0) {
+            if (month % halfYear == 0) {
                 System.out.println("Месяц: " + month + ", сумма накоплений: " + (int) deposite);
             }
         }
@@ -64,11 +67,14 @@ public class Main {
         // Task six
         deposite = 15000;
         month = 0;
-        int distance = 12 * 9;
+        int monthsPerYear = 12;
+        int totalAmountOfYear = 9;
+        int distance = monthsPerYear * totalAmountOfYear;
+
         while (month < distance) {
             month++;
             deposite = deposite + (deposite * percent);
-            if (month % 6 == 0) {
+            if (month % halfYear == 0) {
                 System.out.println("Месяц: " + month + ", сумма накоплений: " + (int) deposite);
             }
         }
@@ -76,16 +82,19 @@ public class Main {
         // Task seven
         int friday = 7;
         int dayOfMonth = 1;
-        while (dayOfMonth <= 30) {
-            if (dayOfMonth % 7 == friday || dayOfMonth % 7 == 0 && friday == 7) {
+        int daysInMonth = 30;
+        int amountOfDaysInWeek = 7;
+        while (dayOfMonth <= daysInMonth) {
+
+            if (dayOfMonth % amountOfDaysInWeek == friday || dayOfMonth % amountOfDaysInWeek == 0 && friday == amountOfDaysInWeek) {
                 System.out.println("Сегодня пятница, " + dayOfMonth + "-е число. Необходимо подготовить отчет");
             }
             dayOfMonth++;
         }
+
         // Task eight
         int currentYear = 2024;
         int start = currentYear - 200;
-        int end = currentYear + 100;
         int period = 79;
         int yearFromZero = 0;
         do {
