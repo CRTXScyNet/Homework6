@@ -103,5 +103,6 @@ public class Main {
                 System.out.println(yearFromZero);
             }
         } while (yearFromZero < currentYear);
+        //
     }
 }
