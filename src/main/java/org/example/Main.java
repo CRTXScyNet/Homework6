@@ -42,7 +42,7 @@ public class Main {
         }
 
         // Task four
-        double percent = 0.07f;
+        double percent = 0.07;
         double deposite = 15000;
         goal = 12_000_000;
         int month = 0;
@@ -80,16 +80,15 @@ public class Main {
         }
 
         // Task seven
-        int friday = 7;
-        int dayOfMonth = 1;
+        int friday = 0;
+        int dayOfMonth = friday;
         int daysInMonth = 30;
         int amountOfDaysInWeek = 7;
         while (dayOfMonth <= daysInMonth) {
-
             if (dayOfMonth % amountOfDaysInWeek == friday || dayOfMonth % amountOfDaysInWeek == 0 && friday == amountOfDaysInWeek) {
                 System.out.println("Сегодня пятница, " + dayOfMonth + "-е число. Необходимо подготовить отчет");
             }
-            dayOfMonth++;
+            dayOfMonth += 7;
         }
 
         // Task eight
